@@ -14,8 +14,11 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-/*change the hexadecimal poperty in decimal property*/
-
+/*
+ * The base must be 10, not 16.
+ * With base 16, the input "10" is interpreted as hexadecimal,
+ * so it becomes 16 instead of 10.
+ */
 size = parseInt(process.argv[2], 10)
 
 for (let i = 0 ; i < size ; i ++) {
